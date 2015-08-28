@@ -1,0 +1,12 @@
+<h1><%= @kitten.name %></h1>
+<ul>
+  <li>Cuteness: <%= @kitten.cuteness %></li>
+  <li>Softness: <%= @kitten.softness %></li>
+  <li>Age: <%= @kitten.age %></li>
+</ul>
+<%= link_to "Edit Kitten", edit_kitten_path %><br>
+<%= form_for @kitten, html: {method: :delete} do |f| %>
+  <%= f.submit "Delete kitten" %>
+<% end %>
+
+<%= link_to "Back to index", kittens_path %>

@@ -1,0 +1,9 @@
+<h3><%= link_to kitten.name, kitten %></h3>
+<ul>
+  <li>Cuteness: <%= kitten.cuteness %></li>
+  <li>Softness: <%= kitten.softness %></li>
+  <li>Age: <%= kitten.age %></li>
+</ul>
+<%= form_for kitten, html: {method: :delete} do |f| %>
+  <%= f.submit "Delete Kitten" %>
+<% end %>
